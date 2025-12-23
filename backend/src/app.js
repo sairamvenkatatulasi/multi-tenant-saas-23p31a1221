@@ -6,6 +6,8 @@ const app = express();
 
 const userRoutes = require('./routes/userRoutes');
 app.use('/api', userRoutes);
+const projectRoutes = require('./routes/projectRoutes');
+app.use('/api/projects', projectRoutes);
 
 app.use(cors({
   origin: process.env.FRONTEND_URL,
