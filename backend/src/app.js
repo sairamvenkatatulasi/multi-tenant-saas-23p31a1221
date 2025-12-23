@@ -4,6 +4,9 @@ const cors = require('cors');
 
 const app = express();
 
+const userRoutes = require('./routes/userRoutes');
+app.use('/api', userRoutes);
+
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   credentials: true
